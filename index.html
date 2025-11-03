@@ -3,25 +3,25 @@
 <html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LexilisMejia - Las Mejores Ofertas Online | Envío Gratis</title>
+  <title>ShopHub - Las Mejores Ofertas Online | Envío Gratis</title>
   <meta name="description" content="Descubre miles de productos con descuentos increíbles. Envío gratis, ofertas flash y los mejores precios del mercado.">
   
   <!-- Open Graph -->
-  <meta property="og:title" content="LexilisMejia - Las Mejores Ofertas Online">
+  <meta property="og:title" content="ShopHub - Las Mejores Ofertas Online">
   <meta property="og:description" content="Miles de productos con descuentos increíbles. Envío gratis y ofertas flash.">
-  <meta property="og:image" content="https://i.pinimg.com/736x/90/84/bd/9084bd03e8403606b7bfc283668c0e91.jpg">
+  <meta property="og:image" content="https://placeholder.com/1200x630">
   <meta property="og:type" content="website">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="LexilisMejia - Las Mejores Ofertas Online">
+  <meta name="twitter:title" content="ShopHub - Las Mejores Ofertas Online">
   <meta name="twitter:description" content="Miles de productos con descuentos increíbles.">
   <meta name="twitter:image" content="https://placeholder.com/1200x630">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com/">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-  <link href="./LexilisMejia - Las Mejores Ofertas Online _ Envío Gratis_files/css2" rel="stylesheet">
+  <link href="./ShopHub - Las Mejores Ofertas Online _ Envío Gratis_files/css2" rel="stylesheet">
   
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
@@ -48,7 +48,7 @@
   
   <style>
     /* ===== CSS VARIABLES ===== */
-    :root {
+     :root {
   --primary: #FF001A;        /* 🔥 Rojo startup — energía, acción y deseo */
   --primary-dark: #B30012;   /* ❤️ Rojo profundo — solidez y poder */
   --accent: #FFD700;         /* ✨ Dorado brillante — lujo y éxito */
@@ -1376,7 +1376,7 @@
             </svg>
           </button>
           
-          <a href="https://v0-e-commerce-startup-prototype.vercel.app/#" class="logo">LexilisMejia</a>
+          <a href="https://v0-e-commerce-startup-prototype.vercel.app/#" class="logo">ShopHub</a>
           
           <div class="search-bar">
             <input type="search" class="search-input" placeholder="Buscar productos, marcas y más..." id="searchInput" aria-label="Buscar productos">
@@ -1724,7 +1724,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section">
-          <h3>Sobre LexilisMejia</h3>
+          <h3>Sobre ShopHub</h3>
           <ul class="footer-links">
             <li><a href="https://v0-e-commerce-startup-prototype.vercel.app/#">Quiénes Somos</a></li>
             <li><a href="https://v0-e-commerce-startup-prototype.vercel.app/#">Trabaja con Nosotros</a></li>
@@ -1785,7 +1785,7 @@
       </div>
       
       <div class="footer-bottom">
-        <p>© 2025 LexilisMejia. Todos los derechos reservados.</p>
+        <p>© 2025 ShopHub. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>
@@ -1814,8 +1814,8 @@
         <span class="subtotal-label">Subtotal:</span>
         <span class="subtotal-value" id="cartSubtotal">$0.00</span>
       </div>
-      <button class="checkout-btn">Proceder al Pago</button>
-    </div>
+      <button class="checkout-btn" onclick="payCart()">Pagar con Wompi</button>
+</div>
   </div>
   
   <!-- PRODUCT MODAL -->
@@ -1925,16 +1925,18 @@
   
   <script>
     // ===== PRODUCT DATA =====
-    const products = [
+   const products = [
   {
     "id": 987469546,
     "title": "ENERMACC 700 GR",
     "images": [
       "https://i.pinimg.com/736x/fd/ea/6b/fdea6b7f1c4a2ee63aa1a6b994b8ee3c.jpg"
     ],
+
     "price": 60000.0,
-    "oldPrice": 60000.0,
+    "oldPrice": 160000.0,
     "rating": 5.0,
+"description": "Enermacc de Edervit – 700 G. Energía y fuerza natural para tu día. Enermacc es un alimento en polvo elaborado a base de harina de arroz, calostro bovino, maca y probióticos, fortificado con hierro y vitamina C. Una combinación ideal para reforzar la energía, el sistema inmunológico y la vitalidad diaria, perfecto para quienes buscan mantenerse activos, fuertes y llenos de vitalidad. Beneficios principales: Energía natural y rendimiento físico: La maca y el hierro ayudan a combatir la fatiga, mejoran la resistencia y apoyan el metabolismo energético. Refuerza el sistema inmunológico y digestivo: Gracias a sus probióticos y al calostro bovino, contribuye a mantener una flora intestinal saludable y fortalecer las defensas naturales del cuerpo. Recuperación y bienestar general: El calostro bovino y la vitamina C promueven la regeneración celular, ayudando al cuerpo a recuperarse tras el esfuerzo físico y mantener un equilibrio saludable.",
     "reviewsCount": 1,
     "tags": [
       "sistema-imnulogico",
@@ -7939,6 +7941,7 @@
     
     function updateCartQuantity(productId, change) {
       const item = cart.find(item => item.id === productId);
+
       if (!item) return;
       
       item.quantity += change;
@@ -8282,5 +8285,49 @@
     // - GET /api/reviews/:productId - Get product reviews
   </script>
 
+</script> 
+
+    <script src="https://checkout.wompi.co/widget.js"></script> 
+    
+    <script>
+        // ⚠️ IMPORTANTE: Reemplaza por tu llave pública REAL de Wompi
+        const WOMPI_PUBLIC_KEY = "pub_test_Gnyz4qdOTGbcKt92gyIr1Wp9GOZuiZOS"; 
+
+        /* ========= PAY CART (LA FUNCIÓN QUE EL BOTÓN NO ENCUENTRA) ========= */
+        function payCart() {
+          const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+          const totalCents = Math.round(total * 100);
+
+          if (total <= 0) {
+            alert("El carrito está vacío ❌. Agrega productos para continuar.");
+            return;
+          }
+
+          const checkout = new WidgetCheckout({
+            currency: "COP", 
+            amountInCents: totalCents,
+            reference: "ORDER-" + Date.now(),
+            publicKey: WOMPI_PUBLIC_KEY,
+            redirectUrl: window.location.href 
+          });
+
+          checkout.open(function (result) {
+            console.log("Resultado de Wompi:", result);
+            if (result.status === 'APPROVED') {
+                alert("¡✅ Pago exitoso! Recibirás la confirmación pronto.");
+                cart = []; 
+                updateCart(); 
+            } else if (result.status === 'DECLINED' || result.status === 'ERROR') {
+                alert("El pago falló. 😔 Por favor, revisa tus datos o intenta de nuevo.");
+            }
+          });
+        }
+        
+        // Opcional: Si usas la función payNow, también ponla aquí.
+        /* function payNow(product) { ... }
+        */
+    </script>
+    </body>
+</html>
 
 </body></html>
